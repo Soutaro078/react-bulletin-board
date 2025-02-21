@@ -1,0 +1,99 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ヘッダー */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33CC99;
+    padding: 15px 20px;
+}
+
+.title {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.new-thread-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* スレッド一覧 */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    min-height: 100vh; /* 画面全体の高さにする（ここは要相談） */
+}
+
+.thread-title {
+    font-size: 1.5em;
+    /* margin-bottom: 10px; */
+}
+
+/* スレッドのリスト */
+.thread-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* スレッドボタン */
+.thread-item {
+    width: 300px;
+    padding: 10px;
+    font-size: 1.1em;
+    border: none;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* スレッド作成ボタン */
+.new-thread-btn {
+    background-color: #33CC99;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.new-thread-btn:hover {
+    background-color: #28a085;
+}
+
+/* スレッド作成フォーム */
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #33CC99;
+    color: white;
+}
+
+button:hover {
+    background-color: #28a085;
+}
+
+
