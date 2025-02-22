@@ -6,18 +6,11 @@ export function ThreadList() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // const fetchThreads = () => {
-  //   fetch("https://railway.bulletinboard.techtrain.dev/threads")
-  //     .then((response) => response.json())
-  //     .then((data) => setThreads(data))
-  //     .catch((error) => console.error("Error fetching data:", error));
-  // };
-
   const fetchThreads = () => {
     fetch("https://railway.bulletinboard.techtrain.dev/threads")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); // データをコンソールに出力
+        // console.log(data); // データをコンソールに出力
         setThreads(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
@@ -26,12 +19,6 @@ export function ThreadList() {
   useEffect(() => {
       fetchThreads();
   }, []);
-
-  // useEffect(() => {
-  //   if (location.state?.refresh) {
-  //     fetchThreads();
-  //   }
-  // }, [location.state]);
 
   return (
     <div>
@@ -130,3 +117,9 @@ export function ThreadList() {
 //       </div>
 //   );
 // }
+
+  // useEffect(() => {
+  //   if (location.state?.refresh) {
+  //     fetchThreads();
+  //   }
+  // }, [location.state]);
