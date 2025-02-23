@@ -10,7 +10,7 @@ export function ThreadList() {
     fetch("https://railway.bulletinboard.techtrain.dev/threads")
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data); // データをコンソールに出力
+        console.log(data); // データをコンソールに出力
         setThreads(data);
       })
       .catch((error) => console.error("Error fetching data:", error));
@@ -33,7 +33,11 @@ export function ThreadList() {
         <h2 className="thread-title">新着スレッド</h2>
         <div className="thread-list">
           {threads.map((thread) => (
-            <button key={thread.id} className="thread-item">
+            <button
+            key={thread.id}
+            className="thread-item"
+            onClick={() => navigate(`/threads/${thread.id}/posts`, { state: { title: thread.title } })}
+            >
               {thread.title}
             </button>
           ))}

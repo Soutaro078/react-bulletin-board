@@ -74,6 +74,10 @@ body {
     background-color: #28a085;
 }
 
+.to-top-page-new {
+    background-color: #008cba; 
+  }
+
 /* スレッド作成フォーム */
 input {
     width: 80%;

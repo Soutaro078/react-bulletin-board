@@ -45,7 +45,7 @@ export function NewThread() {
         />
         <button type="submit">作成</button>
       </form>
-      <button className="to-top-page" onClick={() => navigate('/')}>
+      <button className="to-top-page-new" onClick={() => navigate('/')}>
           Topに戻る
       </button>
     </div>
